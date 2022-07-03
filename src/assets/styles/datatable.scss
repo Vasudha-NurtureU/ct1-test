@@ -1,0 +1,388 @@
+// table style start
+
+.cityone-datatable {
+
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0 20px 0 #4c577d05;
+
+  .p-datatable {
+
+    border: 1px solid $border-color;
+    padding: 2px 0;
+
+    .p-datatable-wrapper {
+      background: #fff;
+      border: 0;
+    }
+
+    .p-datatable-header {
+
+      background: #fff;
+      color: #fff;
+      padding: 10px 15px;
+      border: 1px solid $border-color;
+
+      .p-inputtext {
+        padding: 6px;
+      }
+
+      .p-input-icon-left>.p-inputtext {
+        padding-left: 2.5rem;
+      }
+
+      .table-header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        h5 {
+          font-size: 20px;
+          font-weight: 400;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    .p-datatable-thead>tr>th {
+      border: 0px;
+    }
+
+    .p-datatable-tbody>tr>td:not(.p-selection-column) , .cityone-datatable-td{
+      word-break: break-word;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .p-datatable-tbody>tr>td:empty:after {
+      content: "-";
+    }
+
+    .p-datatable-tbody tr {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #eff2f5;
+    }
+
+    .p-datatable-tbody tr:nth-child(odd) {
+      background: #00a3ff05;
+    }
+
+    .p-highlight.p-selectable-row {
+      background-color: #00a3ff0d !important;
+      color: #000 !important;
+    }
+
+    .p-selectable-row {
+      cursor: auto !important;
+    }
+
+    .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+      box-shadow: none !important;
+      border-color: rgb(206, 212, 218) !important;
+    }
+
+    .cityone-table-status {
+      font-size: 0.75rem;
+      font-weight: 700;
+      min-width: 60px;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      display: inline-block;
+      border-radius: 10px;
+      text-align: center;
+      padding: 0 .5rem;
+    }
+
+    .cityone-table-status-active {
+      background-color: #50cd89;
+      color: #ffffff;
+    }
+
+    .cityone-table-status-in-active {
+      background-color: #f1416c;
+      color: #ffffff;
+    }
+
+    .cityone-table-status-pending {
+      background-color: #00a3ff;
+      color: #ffffff;
+    }
+
+    .p-datatable-tbody>tr>td,
+    .p-datatable-thead>tr>th {
+      padding: 6px 12px;
+      font-size: 14px;
+      border: 0;
+    }
+
+    .p-column-title {
+      font-weight: 500 !important;
+    }
+
+    .p-filter-column {
+      border-top: 1px solid $border-color !important;
+    }
+
+    .p-column-filter {
+      width: 180px;
+      max-width: 100%;
+    }
+
+    .p-paginator {
+      padding: 15px !important;
+      border: 1px solid $border-color;
+
+      .p-dropdown {
+        height: 2rem !important;
+      }
+
+      .p-inputtext {
+        padding: 4px !important;
+      }
+
+      .p-link {
+        border-radius: 5px !important;
+        margin: 0 5px !important;
+        min-width: 2rem !important;
+        height: 2rem !important;
+
+        .pi {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .p-paginator-bottom {
+      border: 0;
+      border-top: 1px solid $border-color;
+    }
+
+    .p-button-icon-only {
+      height: 28px !important;
+      width: 18px;
+      background-color: transparent;
+      border: 0;
+      padding: 10px;
+
+      &:hover {
+        background-color: transparent !important;
+      }
+
+      .edit-icon {
+        color: #46515f;
+      }
+
+      .remove-icon {
+        color: $danger;
+      }
+
+      .view-icon {
+        color: $primary;
+      }
+
+      .uil {
+        font-size: 17.5px !important;
+      }
+    }
+
+    .cityone-page-dropdown,
+    .cityone-page-result {
+      position: absolute;
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .cityone-page-result {
+      left: 0;
+    }
+
+    .cityone-page-dropdown {
+      right: 0;
+    }
+
+    .cityone-next-page-link {
+      display: flex;
+      align-items: center;
+    }
+
+    .cityone-next-page-link .goto .p-inputtext {
+      text-align: center;
+    }
+
+  }
+
+  .p-component-overlay {
+    background-color: #00000005;
+  }
+
+  .p-checkbox .p-checkbox-box {
+    background-color: #ced4da8c;
+    border: 0px !important;
+  }
+
+  .p-checkbox .p-checkbox-box.p-highlight {
+    background-color: $primary;
+  }
+
+  .info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .info {
+      word-break: break-word;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .info-icon {
+      font-size: 16px;
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+
+  .actions-section {
+    .p-button {
+      padding: 6px 11px;
+
+      .uil {
+        font-size: 16px;
+
+        &:before {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .p-sortable-column .p-sortable-column-icon {
+    font-size: 12px;
+    color: $primary;
+  }
+
+  .booking-coh-signed {
+    background-color: #50cd893d !important;
+  }
+
+}
+
+.bulk-action-title {
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.gotopage-link a,
+.gotopage-link span {
+  text-decoration: none;
+  color: #000;
+  display: block;
+
+  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    text-decoration: underline;
+    color: $primary;
+    cursor: pointer;
+  }
+}
+
+// table style end
+
+@media only screen and (max-width:645px) {
+  .cityone-datatable {
+    padding: 12.5px;
+  }
+
+  .p-toolbar {
+
+    .datatable-title {
+      h4 {
+        margin-bottom: 8px;
+      }
+    }
+
+    .p-ml-3 {
+      margin-left: 0.5rem !important;
+    }
+
+    .bulk-edit-wrapper {
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      padding: 10px 8px;
+      background: $bg;
+      border-radius: 4px;
+      width: 100%;
+      justify-content: space-between;
+
+      .p-disabled,
+      .p-component:disabled {
+        background-color: #fff;
+      }
+    }
+
+    .bulk-action-title {
+      margin-bottom: 8px;
+    }
+
+    .bulk-edit-update {
+      display: flex;
+    }
+
+    .add-new-btn-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+  }
+}
+
+@import "~assets/styles/responsive.scss";
+
+@include md-max {
+  .p-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+
+    .bulk-action-title {
+      margin-left: 0 !important;
+    }
+  }
+
+  .p-toolbar-group-right {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@include tab-max {
+  .cityone-datatable {
+    .p-datatable {
+      .p-paginator-bottom {
+        padding: 15px 0 !important;
+      }
+
+      .cityone-page-dropdown,
+      .cityone-page-result {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 15px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.cityone {
+  .header-nav {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .left-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      .user-info {
+        background-color: #532fa9;
+        border: 1px solid #532fa9;
+        border-width: 0 1px;
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        min-width: 160px;
+
+        .avator {
+          img {
+            height: 32px;
+            width: 32px;
+            margin-right: 10px;
+          }
+        }
+
+        .user-name {
+          display: flex;
+          flex-direction: column;
+
+          .name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 120px;
+          }
+
+          .role {
+            font-size: 12px;
+            margin-top: 4px;
+          }
+        }
+      }
+
+    }
+
+    .helper-links {
+      padding: 0 20px;
+
+      a {
+        margin: 0 4px;
+        text-decoration: none;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+
+        .help,
+        .faq {
+          font-size: 18.5px;
+          color: #88a6bb;
+          margin-right: 5px;
+        }
+
+        .help {
+          font-size: 18px;
+        }
+      }
+
+      i {
+        font-size: 24px;
+      }
+    }
+
+  }
+}
+
+@import "~assets/styles/responsive.scss";
+
+
+@include tab-max { 
+
+  .cityone {
+    .header-nav { 
+      .helper-links { 
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+    .swith-display-mo {
+      display: none !important;
+    }
+}
+@media (max-width: 767px) {
+  .swith-display {
+    display: none;
+  }
+}

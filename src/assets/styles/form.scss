@@ -1,0 +1,95 @@
+.p-field-wrapper {
+  margin-bottom: 5px;
+  padding: 0.5rem;
+}
+
+.p-field-label {
+  margin-bottom: 6px;
+  display: inline-block;
+  font-size: 14px;
+
+  em {
+    color: $danger;
+    font-size: 16px;
+  };
+  .tooltip-icon {
+    color: $primary;
+  };
+
+}
+
+.p-error-section {
+  margin-top: 5px;
+  font-size: 12.5px;
+  color: $danger;
+}
+
+.p-hint-section {
+  margin-top: 5px;
+  font-size: 12.5px;
+  color: #e3b40b;
+}
+
+.p-inputtext {
+  padding: 6px 10px;
+}
+
+.p-inputtext,
+.p-dropdown {
+  border-color: #e4e6ef;
+}
+
+.p-field {
+  margin-bottom: 1.4rem;
+}
+
+.p-dialog .form-wrapper {
+  margin-bottom: 70px;
+}
+
+.p-multiselect-close-icon {
+  color: #495057;
+}
+
+.form-button-group {
+  border-top: 1px solid #e9ecef;
+  background: #ffffff;
+  color: #212529;
+  padding: 1rem;
+  text-align: right;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  position: absolute;
+  bottom: -5px;
+  margin: 0;
+  width: 100%;
+  left: 0;
+}
+
+.ck-editor__editable_inline {
+  min-height: 205px;
+  ul, ol {
+    padding-left: 20px !important;
+  }
+}
+
+.ck-balloon-panel_visible {
+  z-index: 1102 !important;
+}
+
+.p-dropdown .p-dropdown-label.p-placeholder {
+  color: #060606;
+}
+
+.trainer-register-form {
+  max-width: 700px !important;
+}
+
+.react-tel-input .form-control {
+  width: 100%;
+  border-color: #e4e6ef;
+
+  &::placeholder {
+    color: #ced1d4;
+  }
+}

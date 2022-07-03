@@ -1,0 +1,33 @@
+// import fonts 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+// import fonts 
+
+// import plugin css 
+@import url('primereact/resources/primereact.min.css');
+@import url('primeicons/primeicons.css');
+// import plugin css 
+
+
+// import app style css
+@import '~assets/styles/responsive.scss';
+@import "~assets/styles/theme.scss";
+@import '~assets/styles/primereact.boostrap.scss';
+@import '~assets/styles/common.scss';
+@import '~assets/styles/app.scss';
+@import '~assets/styles/header.scss';
+@import '~assets/styles/login.scss';
+@import '~assets/styles/sidebar.scss';
+@import '~assets/styles/loader.scss';
+@import '~assets/styles/form.scss';
+@import '~assets/styles/datatable.scss';
+@import '~assets/styles/gallery.scss';
+@import '~assets/styles/calendar.scss';
+@import '~assets/styles/report.scss';
+@import '~assets/styles/dashboard.scss';
+// import app style css
+
+// import primeflex seprate for overriting issue 
+@import url('primeflex/primeflex.css');
+
+@import url('react-phone-input-2/lib/style.css');
+@import url('react-image-crop/dist/ReactCrop.css');

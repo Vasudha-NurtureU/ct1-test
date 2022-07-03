@@ -1,0 +1,195 @@
+$headerHeight : 65px;
+$sidebar : 248px;
+$sidebarAnimation : all ease-in-out 300ms;
+$sidebarBg : #252c36;
+
+body {
+  background-color: $bg;
+}
+
+.cityone {
+
+  .app-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+
+    &.open {
+      .sidebar-wrapper {
+        left: -#{$sidebar};
+      }
+
+      .layout {
+        margin-left: 0;
+        width: 100%;
+
+        .header {
+          width: 100%;
+        }
+      }
+
+    }
+  }
+
+  .layout {
+    width: calc(100% - #{$sidebar});
+    margin-left: $sidebar;
+    display: flex;
+    flex-direction: column;
+    transition: $sidebarAnimation;
+
+    .header {
+
+      padding: 0 0 0 10px;
+      min-height: 48px;
+      height: $headerHeight;
+      box-shadow: 0 0 35px 0 #9aa1ab26;
+      background: #532fa9;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width : calc(100% - #{$sidebar});
+      z-index: 3;
+      transition: $sidebarAnimation;
+
+      .menu-toggler {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        cursor: pointer;
+        font-size: 28px;
+      }
+
+    }
+
+  }
+
+  .sidebar-wrapper {
+    background: #ffffff;
+    color: #595c97;
+    transition: none;
+    display: block;
+    min-height: 100%;
+    flex: 0 0 226px;
+    width: $sidebar;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    transition: $sidebarAnimation;
+    box-shadow: 0 0 15px 0 #7e37d81f;
+    height: 100vh;
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .panel-menu {
+        flex-grow: 2;
+        background-color: $sidebarBg;
+        padding: 0 0 75px 0px;
+        margin-bottom: 20px;
+        overflow: auto;
+      }
+    }
+
+    .header-section {
+      height: $headerHeight;
+      border-bottom: 1px solid #532fa9;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #532fa9;
+      position: sticky;
+      top: 0;
+      z-index: 88888888888;
+
+      img {
+        width: 80%;
+      }
+    }
+
+  }
+
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .main-container {
+    flex-grow: 2;
+    padding: 20px 30px;
+    position: relative;
+    padding-top: calc(#{$headerHeight} + 20px);
+  }
+
+  .footer-section {
+    padding: 14px 30px;
+    text-align: right;
+    background: #fff;
+    font-size: 12.5px;
+
+    h4 {
+      color: #b5b5b5;
+      font-weight: 400;
+    }
+  }
+
+}
+
+.user-menu {
+  .p-submenu-header {
+    padding: 0;
+  }
+}
+
+.p-calendar .p-inputtext {
+  &::placeholder{
+    color: #7a7a7a
+  }
+}
+
+@import "~assets/styles/responsive.scss";
+
+@include md-max {
+  .cityone {
+    .sidebar-wrapper {}
+
+    .layout {
+      width: 100% !important;
+      margin-left: 0 !important;
+
+      .header {
+        margin-left: $sidebar;
+      }
+    }
+
+    .app-wrapper.open {
+      .layout {
+        .header {
+          width: 100% !important;
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+@include md-max {
+  .cityone {
+    .main-container {
+      padding: 30px 10px;
+      padding-top: calc(65px + 20px);
+    }
+  }
+}

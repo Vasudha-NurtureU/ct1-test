@@ -1,0 +1,125 @@
+.gallery-dialog {
+  width: 75vw;
+
+  .p-dialog-content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+
+.gallery-search-section {
+  height: 30px;
+}
+
+.gallery-button {
+  color: blue;
+}
+
+.gallery-filter-section {
+  width: 100%;
+  height: 45px;
+  position: sticky;
+  left: 0;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid $border-color;
+  z-index: 1;
+  padding-top: 10px;
+}
+
+.gallery-filter-dropdown {
+  height: 30px;
+}
+
+.gallery-heading {
+  padding-bottom: 5px;
+}
+
+.gallery-button:hover {
+  color: blue !important;
+}
+
+.gallery-button {
+  padding: 5px;
+}
+
+.gallery-media-scroll-container {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.gallery-media {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  .gallery-media-icon {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.gallery-media-selected {
+  .gallery-media-icon {
+    border: 2.5px solid #00a3ff;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+
+.gallery-info-panel {
+  border-left: 1px solid $border-color;
+}
+
+.gallery-info-panel>div {
+  margin: 10px;
+}
+
+.gallery-info-box {
+  position: sticky;
+}
+
+.gallery-info-label {
+  text-align: left;
+}
+
+.gallery-info-value {
+  color: #1e1d1da6;
+}
+
+.gallery-info-line-box {
+  margin: 10px 6px;
+}
+
+.gallery-button-group {
+  border-top: 1px solid #e9ecef;
+  background: #ffffff;
+  color: #212529;
+  padding: 1rem;
+  text-align: right;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  position: absolute;
+  bottom: -5px;
+  margin: 0;
+  width: 100%;
+  left: 0;
+}
+
+.cityone-gallery-info-table {
+  width: 100%;
+  margin: 10px 0;
+
+  tr {
+    td {
+      padding: 5px;
+    }
+  }
+}
+
+.gallery-media-container {
+  flex-wrap: wrap;
+}

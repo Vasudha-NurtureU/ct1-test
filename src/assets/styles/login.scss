@@ -1,0 +1,118 @@
+.login-section {
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 94%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  &.account {
+    justify-content: left;
+    align-items: flex-start;
+  }
+
+  .p-card {
+    border-radius: 0;
+    box-shadow: -4px 1px 31px 0px rgba(97,97,97,0.45) !important;
+    -webkit-box-shadow: -4px 1px 31px 0px rgba(97,97,97,0.45) !important;
+    -moz-box-shadow: -4px 1px 31px 0px rgba(97,97,97,0.45) !important;
+  }
+
+  .card-wrapper {
+    width: 98%;
+    max-width: 385px;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .sign-up-link {
+    text-decoration: none;
+    color: $success;
+  }
+
+  .subtitle {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .or {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid $bg;
+    line-height: 0.1em;
+    margin: 15px 0;
+
+    span {
+      background: #fff;
+      padding: 0 10px;
+    }
+
+  }
+
+  .forget-pass {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    color: $primary;
+  }
+
+  .login-button {
+    width: 100%;
+  }
+
+  .social-btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+
+    button {
+      box-shadow: 0px 0px 10px #f1f1f1 !important;
+      background: #fff;
+      border: solid 2px #f7f7f7 !important;
+      border-radius: 8px !important;
+      font-weight: bold !important;
+      padding: 5px 10px !important;
+      flex: auto;
+      justify-content: center;
+      color: #000 !important;
+    }
+  }
+
+  .popup-form-section {
+    margin-bottom: 0;
+  }
+}
+
+
+// regiter 
+
+.register-section {
+  .card-wrapper {
+    max-width: 637px;
+  }
+
+  .p-col-6 {
+    width: 50% !important;
+  }
+}
+
+
+.forget-section {
+  .form-wrapper .p-button {
+    width: 100%;
+  }
+}
+
+.sso-btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+}

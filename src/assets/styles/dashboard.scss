@@ -1,0 +1,25 @@
+.dashboard-card {
+  border-radius: 4px;
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: #98f6fb;
+  box-shadow: 0px 0px 3px #f1f1f1 !important;
+}
+
+.dashboard-card-count {
+  font-size: 20px;
+}
+
+.dashboard-card-view {
+  color: #acb5be;
+  font-size: 12px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.status-confirmed {
+  background: $success;
+}

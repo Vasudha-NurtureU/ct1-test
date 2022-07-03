@@ -1,0 +1,78 @@
+{
+  "name": "city-one",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "27.1.0",
+    "@ckeditor/ckeditor5-react": "3.0.2",
+    "@fullcalendar/core": "4.4.0",
+    "@fullcalendar/daygrid": "4.4.0",
+    "@fullcalendar/interaction": "4.4.0",
+    "@fullcalendar/react": "4.4.0",
+    "@fullcalendar/timegrid": "4.4.0",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
+    "chart.js": "3.3.2",
+    "crypto-js": "4.1.1",
+    "dotenv": "^10.0.0",
+    "file-saver": "^2.0.5",
+    "firebase": "^8.7.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "primeflex": "2.0.0",
+    "primeicons": "4.1.0",
+    "primereact": "6.3.1",
+    "randomcolor": "0.6.2",
+    "react": "^17.0.2",
+    "react-chartjs-2": "3.0.3",
+    "react-csv": "2.0.3",
+    "react-dom": "^17.0.2",
+    "react-file-icon": "1.0.0",
+    "react-hook-form": "7.1.1",
+    "react-image-crop": "^9.0.5",
+    "react-phone-input-2": "2.14.0",
+    "react-redux": "^7.2.3",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-select": "4.3.1",
+    "react-transition-group": "4.4.1",
+    "redux": "^4.0.5",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "ie 11",
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.24.0",
+    "husky": "^7.0.0",
+    "node-sass": "^5.0.0"
+  }
+}
