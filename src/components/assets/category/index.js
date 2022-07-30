@@ -182,7 +182,7 @@ class Category extends Component {
               onClick: ({ selections }) => {
                 confirmDialog.toggle(true);
                 confirmDialog.custom({
-                  message: "Are you sure you want to delete these asset categories? This may affect other screens",
+                  message: "Are you sure you want to delete these asset categories? ",
                   accept: () => { this.bulkDelete(selections) }
                 });
               }

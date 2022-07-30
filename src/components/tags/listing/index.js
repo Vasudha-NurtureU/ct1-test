@@ -177,7 +177,7 @@ class TagsListing extends Component {
             deleteBtnsOptions: {
               onClick: ({ selections }) => {
                 confirmDialog.toggle(true);
-                confirmDialog.custom({ message: "Are you sure you want to delete these tags? This may affect other screens" });
+                confirmDialog.custom({ message: "Are you sure you want to delete these tags? " });
                 confirmDialog.accept(() => { this.bulkDelete(selections) });
               }
             },

@@ -160,7 +160,7 @@ class BestTime extends Component {
             deleteBtnsOptions: {
               onClick: ({ selections }) => {
                 confirmDialog.toggle(true);
-                confirmDialog.custom({ message: "Are you sure you want to delete these best time to visit? This may affect other screens" });
+                confirmDialog.custom({ message: "Are you sure you want to delete these best time to visit? " });
                 confirmDialog.accept(() => { this.bulkDelete(selections) });
               }
             },
