@@ -180,7 +180,7 @@ class Usefulinfo extends Component {
             deleteBtnsOptions: {
               onClick: ({ selections }) => {
                 confirmDialog.toggle(true);
-                confirmDialog.custom({ message: "Are you sure you want to delete these useful info? This may affect other screens" });
+                confirmDialog.custom({ message: "Are you sure you want to delete these useful info? " });
                 confirmDialog.accept(() => { this.bulkDelete(selections) });
               }
             },

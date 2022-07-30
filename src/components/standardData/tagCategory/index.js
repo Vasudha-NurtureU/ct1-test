@@ -130,7 +130,7 @@ class Tagcategory extends Component {
               confirmDialog.toggle(true);
 
               confirmDialog.custom({
-                message: "Are you sure you want to delete this tag category? This may affect other screens",
+                message: "Are you sure you want to delete this tag category? ",
 
                 header: "Confirmation",
 
@@ -159,7 +159,7 @@ class Tagcategory extends Component {
             deleteBtnsOptions: {
               onClick: ({ selections }) => {
                 confirmDialog.toggle(true);
-                confirmDialog.custom({ message: "Are you sure you want to delete these tag categories? This may affect other screens" });
+                confirmDialog.custom({ message: "Are you sure you want to delete these tag categories? " });
                 confirmDialog.accept(() => { this.bulkDelete(selections) });
               }
             },

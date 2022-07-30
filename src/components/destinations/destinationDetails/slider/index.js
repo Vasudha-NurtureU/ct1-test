@@ -169,7 +169,7 @@ class Slider extends Component {
             deleteBtnsOptions: {
               onClick: ({ selections }) => {
                 confirmDialog.toggle(true);
-                confirmDialog.custom({ message: "Are you sure you want to delete these sliders? This may affect other screens" });
+                confirmDialog.custom({ message: "Are you sure you want to delete these sliders? " });
                 confirmDialog.accept(() => { this.bulkDelete(selections) });
               }
             },

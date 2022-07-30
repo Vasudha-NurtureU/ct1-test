@@ -59,19 +59,29 @@ const BookingsForm = (props) => {
         }
       }
     },
-    customer_id: {
+    customer_name: {
       properties: {
-        type: 'Dropdown',
-        label: 'Customer',
-        dropdownOptions: "customers",
-        primeFieldProps: {
-          readOnly: isEditable ? true : false,
-        },
+        type: 'InputText',
+        label: 'Customer Name',
         validations: {
           required: validations.required,
           maxLength: {
-            value: 180,
-            message: 'Please choose a customer'
+            value: 280,
+            message: 'Please enter a customer name'
+          }
+        }
+      }
+    },
+    customer_email_address: {
+      properties: {
+        type: 'InputText',
+        label: 'Customer Email Address',
+        validations: {
+          required: validations.required,
+          pattern: validations.email,
+          maxLength: {
+            value: 280,
+            message: 'Please enter a customer email address'
           }
         }
       }
@@ -87,6 +97,15 @@ const BookingsForm = (props) => {
             value: 120,
             message: 'Please enter name with maximum 120 characters'
           },
+        }
+      }
+    },
+    price: {
+      properties: {
+        type: 'InputText',
+        label: 'Package Price',
+        validations: {
+          required: validations.required,
         }
       }
     },
@@ -181,8 +200,10 @@ const BookingsForm = (props) => {
   // form submit 
   const BookingsFormFieldsonUpdate = {
     transaction_id: BookingsFormFields.transaction_id,
-    customer_id: BookingsFormFields.customer_id,
+    customer_name: BookingsFormFields.customer_name,
+    customer_email_address: BookingsFormFields.customer_email_address,
     package_id: BookingsFormFields.package_id,
+    price: BookingsFormFields.price,
     travel_date: BookingsFormFields.travel_date,
     sharing_type: BookingsFormFields.sharing_type,
     no_of_adult: BookingsFormFields.no_of_adult,
@@ -194,8 +215,10 @@ const BookingsForm = (props) => {
 
   const BookingsFormFieldsOnAdd = {
     transaction_id: BookingsFormFields.transaction_id,
-    customer_id: BookingsFormFields.customer_id,
+    customer_name: BookingsFormFields.customer_name,
+    customer_email_address: BookingsFormFields.customer_email_address,
     package_id: BookingsFormFields.package_id,
+    price: BookingsFormFields.price,
     travel_date: BookingsFormFields.travel_date,
     sharing_type: BookingsFormFields.sharing_type,
     no_of_adult: BookingsFormFields.no_of_adult,

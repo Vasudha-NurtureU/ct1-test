@@ -94,7 +94,7 @@ class BookingDetails extends Component {
 
   render() {
     // state and props destructure start
-    const { booking_id, packages, transaction_id, travel_date, sharing_type, no_of_adult, no_of_infant, no_of_child, customer, status } = { ...this.state.bookingInfo };
+    const { booking_id, packages, transaction_id, travel_date, sharing_type, no_of_adult, no_of_infant, no_of_child, customer_name, customer_email_address, price, status } = { ...this.state.bookingInfo };
     //const packages = this.state.bookingInfo.package;
     return (
       <>
@@ -125,12 +125,12 @@ class BookingDetails extends Component {
                   <span>{packages ? packages.name : '-'}</span>
                 </div>
 
-                {/* <div className="p-col-md-4 p-col-6 p-mb-3">
+                <div className="p-col-md-4 p-col-6 p-mb-3">
                   <p className="p-mb-2">
-                    <b>Pickup Location</b>
+                    <b>Package Price</b>
                   </p>
-                  <span>{pickup_location ? pickup_location : '-'}</span>
-                </div> */}
+                  <span>AED {price ? price : '-'}</span>
+                </div>
 
                 <div className="p-col-md-4 p-col-6 p-mb-3">
                   <p className="p-mb-2">
@@ -186,19 +186,13 @@ class BookingDetails extends Component {
                     <p className="p-mb-2">
                       <b>Name</b>
                     </p>
-                    <span>{customer ? `${customer.first_name} ${customer.last_name}` : '-'}</span>
+                    <span>{customer_name}</span>
                   </div>
                   <div className="p-col-md-4 p-col-6 p-mb-3">
                     <p className="p-mb-2">
                       <b>Email Address</b>
                     </p>
-                    <span>{customer ? customer.email_address : '-'}</span>
-                  </div>
-                  <div className="p-col-md-4 p-col-6 p-mb-3">
-                    <p className="p-mb-2">
-                      <b>Contact Number</b>
-                    </p>
-                    <span>{customer ? customer.contact_number : '-'}</span>
+                    <span>{customer_email_address}</span>
                   </div>
               </div>
 
