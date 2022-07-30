@@ -218,7 +218,7 @@ class AssetsManagementList extends Component {
               onClick: ({ selections }) => {
                 confirmDialog.toggle(true);
                 confirmDialog.custom({
-                  message: "Are you sure you want to delete these assets? This may affect other screens",
+                  message: "Are you sure you want to delete these assets? ",
                   accept: () => { this.bulkDelete(selections) }
                 });
               }

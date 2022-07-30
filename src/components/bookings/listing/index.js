@@ -12,7 +12,7 @@ import buildBreadcrumb from "utils/breadcrumb";
 
 import { dropdown } from "utils/dropdown";
 
-import { createdDateBadge, statusBadge, customerBadge, packageBadge } from "utils/badgeTemplate";
+import { createdDateBadge, statusBadge, packageBadge } from "utils/badgeTemplate";
 
 import { confirmDialog } from "utils/confirmDialog";
 
@@ -45,7 +45,8 @@ class BookingsListing extends Component {
 
     this.bookingsFormInitValue = {
       transaction_id: null,
-      customer_id: null,
+      customer_name: null,
+      customer_email_address: null,
       package_id: null,
       travel_date: null,
       sharing_type: null,
@@ -94,8 +95,17 @@ class BookingsListing extends Component {
 
         columns: [
           {
-            header: 'Booking Id',
+            header: 'Ref Id',
             field: 'booking_ref_id',
+            sortable: true,
+            filter: true,
+            headerStyle: {
+              width: '90px'
+            },
+          },
+          {
+            header: 'Customer Name',
+            field: 'customer_name',
             sortable: true,
             filter: true,
             headerStyle: {
@@ -103,18 +113,13 @@ class BookingsListing extends Component {
             },
           },
           {
-            header: 'Customer',
-            field: 'customer_id',
+            header: 'Customer Email ',
+            field: 'customer_email_address',
             sortable: true,
             filter: true,
-            filterElementOptions: {
-              type: 'Dropdown',
-              value: "customers",
-            },
             headerStyle: {
               width: '150px'
             },
-            body: customerBadge,
           },
           {
             header: 'Package',
@@ -287,8 +292,10 @@ class BookingsListing extends Component {
         initValue: {
           transaction_id: rowdata.transaction_id,
           booking_id: rowdata.booking_id,
-          customer_id: rowdata.customer_id,
+          customer_name: rowdata.customer_name,
+          customer_email_address: rowdata.customer_email_address,
           package_id: rowdata.package_id,
+          price: rowdata.price,
           travel_date: rowdata.travel_date? new Date(rowdata.travel_date) : rowdata.travel_date,
           sharing_type: rowdata.sharing_type,
           no_of_adult: rowdata.no_of_adult,

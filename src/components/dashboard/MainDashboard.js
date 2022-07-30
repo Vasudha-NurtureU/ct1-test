@@ -440,11 +440,11 @@ class MainDashboard extends Component {
       this.maxCenterSessions = rowData[field];
     return rowData[field]
       ?
-      <div style={{ textAlign: "right", paddingRight: "4px", backgroundColor: `rgba(108, 213, 13, ${Math.max((rowData[field] / this.maxCenterSessions), 0.04)})` }}>
+      <div style={{ textAlign: "right", paddingRight: "4px" }}>
         {rowData[field]}
       </div>
       :
-      <div style={{ textAlign: "right", backgroundColor: `rgba(108, 213, 13, 0.04)` }}> 0 </div>
+      <div style={{ textAlign: "right" }}> 0 </div>
   }
 
   trainerSessionsTemplate = (rowData, { field }) => {
@@ -452,9 +452,9 @@ class MainDashboard extends Component {
       this.maxTrainerSessions = rowData[field];
     return rowData[field]
       ?
-      <div style={{ textAlign: "right", paddingRight: "4px", backgroundColor: `rgba(230, 34, 139, ${Math.max((rowData[field] / this.maxTrainerSessions), 0.04)})` }}>{rowData[field]}</div>
+      <div style={{ textAlign: "right", paddingRight: "4px"}}>{rowData[field]}</div>
       :
-      <div style={{ textAlign: "right", backgroundColor: `rgba(230, 34, 139, 0.04)` }}> 0 </div>
+      <div style={{ textAlign: "right" }}> 0 </div>
   }
 
   componentDidMount() {
@@ -492,6 +492,18 @@ class MainDashboard extends Component {
             <div className="p-col-12 p-md-6">
               <div className="p-card">
                 <CityoneDataTable options={this.state.enquiryTableOptions} />
+              </div>
+            </div>
+          </div>
+
+          <div className="p-grid p-mt-2">
+          <div className="p-col-12 p-md-12">
+              <div className="p-card p-4">
+                <div style={{padding: "20px 14px"}}>
+                <button className="p-button p-component p-button-primary p-ml-3"
+                onClick={() => { this.dashboardService.triggerDeployment() }}>
+                  <span className="p-button-label p-c">Publish Changes</span></button>
+                </div>
               </div>
             </div>
           </div>

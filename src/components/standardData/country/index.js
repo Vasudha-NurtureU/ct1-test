@@ -131,7 +131,7 @@ class Country extends Component {
               confirmDialog.toggle(true);
 
               confirmDialog.custom({
-                message: "Are you sure you want to delete this country? This may affect other screens",
+                message: "Are you sure you want to delete this country? ",
 
                 header: "Confirmation",
 
@@ -160,7 +160,7 @@ class Country extends Component {
             deleteBtnsOptions: {
               onClick: ({ selections }) => {
                 confirmDialog.toggle(true);
-                confirmDialog.custom({ message: "Are you sure you want to delete these countries? This may affect other screens" });
+                confirmDialog.custom({ message: "Are you sure you want to delete these countries? " });
                 confirmDialog.accept(() => { this.bulkDelete(selections) });
               }
             },

@@ -57,7 +57,7 @@ class BookingReport extends Component {
           },
           {
             label: "Customer",
-            key: "customer_id"
+            key: "customer_name"
           },
           {
             label: "Package",

@@ -13,4 +13,8 @@ export default class DashboardService {
   recentEnquires() {
     return ax.post('recentqueries');
   }
+
+  triggerDeployment() {
+    return ax.post('deploy');
+  }
 }
